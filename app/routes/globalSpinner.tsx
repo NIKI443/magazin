@@ -12,7 +12,7 @@ export const GlobalSpinner: React.FC<Props> = ({ className }) => {
 			<Loader
 				className={cn(
 					'loader w-14 h-14 xxs:w-16 xxs:h-16 aspect-square border-[6px] border-default/70 border-l-white',
-					className
+					className,
 				)}
 			/>
 			<span

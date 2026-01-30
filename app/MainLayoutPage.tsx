@@ -14,12 +14,11 @@ export default function LayoutPage() {
 	useEffect(() => {
 		if (globalThis.localStorage?.getItem('token') !== null) AuthMe()
 	}, [AuthMe])
-
-	if (isCheckingAuth && globalThis.localStorage?.getItem('token') !== null)
-		return <GlobalSpinner />
 	if (globalThis.localStorage?.getItem('token') == null && !authUser) {
 		return <Navigate to='/login' />
 	}
+	if (isCheckingAuth && globalThis.localStorage?.getItem('token') !== null)
+		return <GlobalSpinner />
 
 	return <Outlet />
 }
