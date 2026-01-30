@@ -15,7 +15,8 @@ export default function LayoutPage() {
 		if (globalThis.localStorage?.getItem('token') !== null) AuthMe()
 	}, [AuthMe])
 
-	if (isCheckingAuth) return <GlobalSpinner />
+	if (isCheckingAuth && globalThis.localStorage?.getItem('token') !== null)
+		return <GlobalSpinner />
 	if (globalThis.localStorage?.getItem('token') == null && !authUser) {
 		return <Navigate to='/login' />
 	}
