@@ -106,7 +106,7 @@ export const useProductStore = create<ProductState & ProductActions>()(
 					try {
 						const res = await axios.post(`/api/product`, data)
 						const resData = res.data.data
-						product.ID_товара_корзины = resData[0].ID_товара_корзины
+						product.ID_товара_корзины = resData.ID_товара_корзины
 
 						set({ carts: [...existingProduct, product] })
 					} catch (error) {
