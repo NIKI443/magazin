@@ -2,7 +2,7 @@
 
 Сайт можно посетить по ссылке ниже
 
-[Сайт](https://product-catalog-ecru.vercel.app/)
+[Сайт](https://magazin-wheat.vercel.app/)
 
 ## Стек
 
